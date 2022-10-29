@@ -1,0 +1,221 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Space Mono", monospace;
+}
+
+:root {
+  --Strong-cyan: #26c0ab;
+  --Very-dark-cyan: #00494d;
+  --Dark-grayish-cyan: #5e7a7d;
+  --Grayish-cyan: #7f9c9f;
+  --Light-grayish-cyan: #c5e4e7;
+  --Very-light-grayish-cyan: #f4fafa;
+  --White: #ffffff;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+  background-color: var(--Light-grayish-cyan);
+}
+/* Header  */
+h1.heading {
+  color: var(--Very-dark-cyan);
+  margin-bottom: 50px;
+  font-size: 20px;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 5px;
+}
+h1.heading span {
+  display: block;
+}
+
+/* Calculator */
+.container {
+  background: var(--Very-light-grayish-cyan);
+  padding: 30px;
+  border-radius: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: Space-between;
+  width: 700px;
+}
+
+/* Section Fill  */
+
+.container .fill,
+.container .bill {
+  width: 48%;
+}
+.container .bill {
+  background: var(--Very-dark-cyan);
+  border-radius: 5px;
+}
+.fill .bill-num {
+  margin-bottom: 20px;
+}
+label {
+  display: block;
+  font-size: 12px;
+  color: var(--Very-dark-cyan);
+  font-weight: 700;
+  margin-bottom: 5px;
+  position: relative;
+}
+.label-number::after {
+  content: url(./images/icon-dollar.svg);
+  position: absolute;
+  top: 31px;
+  left: 10px;
+}
+input {
+  font-weight: 700;
+  width: 100%;
+  color: var(--Very-dark-cyan);
+  background: var(--Light-grayish-cyan);
+  border-radius: 5px;
+  height: 35px;
+  border: none;
+  outline: none;
+  direction: rtl;
+  padding: 5px;
+  font-size: 18px;
+  cursor: pointer;
+}
+input:hover,
+input:focus {
+  border: 1px solid var(--Strong-cyan);
+}
+input::-webkit-inner-spin-button,
+input::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.tips {
+  margin-bottom: 20px;
+}
+
+.tips .btns {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 10px;
+  width: 100%;
+}
+
+.tips .btns .btn {
+  width: 30%;
+  height: 30px;
+  outline: none;
+  border: none;
+  background: var(--Very-dark-cyan);
+  color: var(--White);
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+  font-weight: 700;
+}
+.tips .btns .btn.custom,
+.tips .btns .btn.custom:hover,
+.tips .btns .btn.custom:focus {
+  background: var(--Light-grayish-cyan);
+  text-align: center;
+  font-weight: 700;
+}
+.tips .btns .btn:focus,
+.tips .btns .btn:hover {
+  background: var(--Strong-cyan);
+  color: var(--Very-dark-cyan);
+}
+
+.label-people::after {
+  content: url(./images/icon-person.svg);
+  position: absolute;
+  top: 31px;
+  left: 10px;
+}
+
+.container .bill {
+  padding: 30px;
+  height: 270px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.container .bill .amount,
+.container .bill .total {
+  padding: 10px 0px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.container .bill .bill-heading {
+  color: var(--White);
+  font-size: 14px;
+}
+.container .bill .bill-heading span {
+  font-size: 10px;
+  color: var(--Grayish-cyan);
+  display: block;
+}
+.container .bill .bill-result {
+  color: var(--Strong-cyan);
+  position: relative;
+  font-size: 24px;
+}
+.container .bill .bill-result::before {
+  content: "$";
+  position: absolute;
+  top: 0px;
+  left: -15px;
+}
+.btn-reset {
+  text-transform: uppercase;
+  height: 30px;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  font-weight: 700;
+  color: var(--Very-dark-cyan);
+  cursor: pointer;
+  background: var(--Strong-cyan);
+}
+.btn-reset:hover {
+  background: var(--Light-grayish-cyan);
+}
+footer {
+  margin-top: 20px;
+}
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+@media (max-width: 760px) {
+  body {
+    height: auto;
+    padding: 40px 0;
+  }
+  .container {
+    width: 100%;
+    gap: 20px;
+  }
+  .container .fill,
+  .container .bill {
+    width: 100%;
+  }
+  main {
+    padding: 0 20px;
+  }
+}

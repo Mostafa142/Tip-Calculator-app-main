@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Frontend Mentor | Tip calculator app</title>
+  </head>
+
+  <body>
+    <header>
+      <h1 class="heading">Spli<span>tter</span></h1>
+    </header>
+    <main>
+      <section class="container">
+        <section class="fill">
+          <div class="bill-num">
+            <label class="label-number" for="input-number">Bill</label>
+            <input id="input-num" class="input-number" type="number" placeholder="0" />
+          </div>
+          <div class="tips">
+            <label> Select Tip %</label>
+            <div class="btns">
+              <button id="btn-1" value="5" class="btn">5%</button>
+              <button id="btn-2" value="10" class="btn">10%</button>
+              <button id="btn-3" value="15" class="btn">15%</button>
+              <button id="btn-4" value="25" class="btn">25%</button>
+              <button id="btn-5" value="50" class="btn">50%</button>
+              <input id="input-custom" class="btn custom" placeholder="Custom"></input>
+            </div>
+          </div>
+          <div class="nums-0f-people">
+            <label  class="label-people" for="input-people">
+              Number of People</label
+            >
+            <input id="persons" class="input-people" type="number" placeholder="0" />
+          </div>
+        </section>
+        <section class="bill">
+          <div class="bill-header">
+            <div class="amount">
+              <h3 class="bill-heading">Tip Amount <span> / person</span></h3>
+              <h3 id="result1" class="bill-result">0.00</h3>
+            </div>
+            <div class="total">
+              <h3 class="bill-heading">Total <span> / person</span></h3>
+              <h3 id="result2" class="bill-result">0.00</h3>
+            </div>
+          </div>
+          <button id='reset' class="btn-reset">Reset</button>
+        </section>
+      </section>
+      <footer class="attribution">
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+          >Frontend Mentor</a
+        >. Coded by <a target="_blank" href="https://mostafa142.github.io/MyPortfolio/">Mostafa Fathi</a>.
+      </footer>
+    </main>
+    <script src="main.js"></script>
+  </body>
+</html>
