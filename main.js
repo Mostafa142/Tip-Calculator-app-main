@@ -33,7 +33,7 @@ resetBtn.addEventListener("click", (e) => {
   personNumInput.value = "";
   tipAmount.innerHTML = "0.00";
   total.innerHTML = "0.00";
-  customInput.value = "0";
+  customInput.value = "";
 });
 
 btn5.addEventListener("click", () => {
